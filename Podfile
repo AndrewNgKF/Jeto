@@ -5,4 +5,5 @@
 
 target 'Jeto' do
 pod 'Firebase'
+pod 'Firebase/Database'
 end

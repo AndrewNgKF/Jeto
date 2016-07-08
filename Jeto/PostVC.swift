@@ -7,12 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class PostVC: UIViewController {
     
     
     @IBOutlet weak var titleField: UITextField!
-    
     @IBOutlet weak var jetoField: UITextView!
     
     
@@ -28,6 +28,16 @@ class PostVC: UIViewController {
     }
 
     @IBAction func publishBtn(sender: AnyObject) {
+        
+        let post: Dictionary <String, String> = [
+            "title": titleField.text!,
+            "posts": jetoField.text!
+        ]
+        
+        let firebasePost = DataService.ds.REF_JETO.childByAutoId()
+        
+        firebasePost.setValue(post)
+        
     }
 
 }
