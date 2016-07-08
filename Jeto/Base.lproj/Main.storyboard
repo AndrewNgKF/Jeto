@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="79" width="600" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="JetoCell" focusStyle="custom" rowHeight="150" id="pUZ-QH-z3d">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="JetoCell" focusStyle="custom" rowHeight="150" id="pUZ-QH-z3d" customClass="JetoCell" customModule="Jeto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pUZ-QH-z3d" id="fAm-c3-zEX">
@@ -135,6 +135,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.88627450980392153" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="jetoLbl" destination="Dh2-NE-MHF" id="voV-Nx-H4F"/>
+                                            <outlet property="titleLbl" destination="ebr-Ts-oTH" id="GPo-iC-tYT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

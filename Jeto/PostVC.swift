@@ -39,6 +39,8 @@ class PostVC: UIViewController {
         firebasePost.setValue(post)
         
     }
+    
+    
 
 }
 
