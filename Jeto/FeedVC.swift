@@ -30,6 +30,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         
         feedTableView.delegate = self
         feedTableView.dataSource = self
+        feedTableView.rowHeight = UITableViewAutomaticDimension
+        feedTableView.estimatedRowHeight = 200
+        
         
         jetoSearchBar.delegate = self
         jetoSearchBar.returnKeyType = UIReturnKeyType.Done
@@ -126,10 +129,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
             
             filteredJeto = posts.filter({$0.postTitle.rangeOfString(lower) != nil }) + posts.filter({$0.postJeto.rangeOfString(lower) != nil })
                 
-                print(filteredJeto)
+//                print(filteredJeto)
             
                 
-//                posts.filter({$0.postJeto.rangeOfString(lower) != nil })
             feedTableView.reloadData()
         }
     }
