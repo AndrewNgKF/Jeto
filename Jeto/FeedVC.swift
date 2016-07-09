@@ -101,6 +101,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         return 1
     }
     
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if inSearchMode {
