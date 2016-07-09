@@ -9,12 +9,17 @@
 import UIKit
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var posts = [Post]()
+    
     var post: Post!
+    var filteredJeto = [Post]()
+//    var jetoFilter = [Post]()
+
     
-    
+    @IBOutlet weak var jetoSearchBar: UISearchBar!
+    var inSearchMode:Bool = false
     
     
     
@@ -26,6 +31,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         feedTableView.delegate = self
         feedTableView.dataSource = self
         
+        jetoSearchBar.delegate = self
+        jetoSearchBar.returnKeyType = UIReturnKeyType.Done
+        
         //TODO - put posts into a dictionary and display it to the tableView
         
         
@@ -33,7 +41,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 //            print(snapshot.value)
             
-//            self.posts = []
+            self.posts = []
             
             if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 
@@ -73,7 +81,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let post = posts.reverse()[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier("JetoCell") as? JetoCell
         
-        cell!.configureCell(post)
+        var filteredCells: Post!
+        
+        if inSearchMode {
+            filteredCells = filteredJeto[indexPath.row]
+            cell?.configureCell(filteredCells)
+        } else {
+            cell?.configureCell(post)
+        }
+
         
         return cell!
     }
@@ -83,15 +99,41 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        
+        if inSearchMode {
+            return filteredJeto.count
+        } else {
+            return posts.count
+        }
     }
     
+//    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+//        view.endEditing(true)
+//    }
     
     
-   
-
     
-
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text == nil || searchBar.text == "" {
+            inSearchMode = false
+            view.endEditing(true)
+            feedTableView.reloadData()
+            
+        } else {
+            inSearchMode = true
+            let lower = searchBar.text!.lowercaseString
+            
+            filteredJeto = posts.filter({$0.postTitle.rangeOfString(lower) != nil }) + posts.filter({$0.postJeto.rangeOfString(lower) != nil })
+                
+                print(filteredJeto)
+            
+                
+//                posts.filter({$0.postJeto.rangeOfString(lower) != nil })
+            feedTableView.reloadData()
+        }
+    }
+    
 }
 
 
