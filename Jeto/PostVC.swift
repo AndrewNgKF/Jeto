@@ -21,12 +21,15 @@ class PostVC: UIViewController, UITextViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jetoField.text = "Placeholder"
+        jetoField.text = "What would you like to get off your chest?"
         jetoField.textColor = UIColor.lightGrayColor()
         jetoField.becomeFirstResponder()
         
         jetoField.selectedTextRange = jetoField.textRangeFromPosition(jetoField.beginningOfDocument, toPosition: jetoField.beginningOfDocument)
         jetoField.delegate = self
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PostVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
     }
     
@@ -95,6 +98,11 @@ class PostVC: UIViewController, UITextViewDelegate{
         
         
     }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     
     
 
