@@ -39,7 +39,7 @@ class PostVC: UIViewController, UITextViewDelegate{
         
         if updatedText.isEmpty {
             
-            jetoField.text = "Placeholder"
+            jetoField.text = "What would you like to get off your chest?"
             jetoField.textColor = UIColor.lightGrayColor()
             
             jetoField.selectedTextRange = jetoField.textRangeFromPosition(jetoField.beginningOfDocument, toPosition: jetoField.beginningOfDocument)
