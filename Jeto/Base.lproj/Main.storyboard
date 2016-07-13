@@ -16,7 +16,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-LW-l5p">
@@ -25,7 +25,7 @@
                                 <color key="textColor" red="0.88627450980392153" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Please write your title here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrq-gE-XaJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="What would you call it?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrq-gE-XaJ">
                                 <rect key="frame" x="20" y="87" width="560" height="30"/>
                                 <color key="backgroundColor" white="0.93684563758389261" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -69,12 +69,20 @@
                                     <segue destination="SXs-oM-4XD" kind="show" id="BUV-EK-6cy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdZ-Vq-9QP">
+                                <rect key="frame" x="267" y="21" width="70" height="43"/>
+                                <connections>
+                                    <action selector="publishBtn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="JZi-fR-tlJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="tdZ-Vq-9QP" firstAttribute="centerY" secondItem="gAU-LW-l5p" secondAttribute="centerY" id="55R-QD-RGO"/>
                             <constraint firstItem="xrq-gE-XaJ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="8IA-3P-9PK"/>
                             <constraint firstItem="W8e-d2-nUm" firstAttribute="top" secondItem="xrq-gE-XaJ" secondAttribute="bottom" constant="19" id="GkJ-xF-nCK"/>
                             <constraint firstItem="xrq-gE-XaJ" firstAttribute="top" secondItem="gAU-LW-l5p" secondAttribute="bottom" constant="20" id="H43-wX-mPl"/>
+                            <constraint firstItem="tdZ-Vq-9QP" firstAttribute="centerX" secondItem="gAU-LW-l5p" secondAttribute="centerX" id="H6L-T9-mga"/>
                             <constraint firstItem="gAU-LW-l5p" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="Lqq-Gu-WTW"/>
                             <constraint firstItem="YbK-ua-zNa" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="NA5-IL-GHO"/>
                             <constraint firstItem="W8e-d2-nUm" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="cYS-Y6-FJz"/>
@@ -86,6 +94,7 @@
                             <constraint firstItem="W8e-d2-nUm" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="xJx-f3-KIu"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="" image="post" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="jetoField" destination="W8e-d2-nUm" id="I9G-4f-vh3"/>
@@ -105,7 +114,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hJf-yn-bJs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mA2-aK-HOD">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-PA-RW1">
@@ -132,7 +141,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MY0-kQ-yHx">
-                                <rect key="frame" x="119" y="427" width="362" height="133"/>
+                                <rect key="frame" x="119" y="378" width="362" height="133"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="362" id="JyG-Xb-0fV"/>
                                     <constraint firstAttribute="height" constant="133" id="iFs-u0-bDV"/>
@@ -160,7 +169,7 @@ anonymously. </string>
                                 </constraints>
                                 <state key="normal" image="back"/>
                                 <connections>
-                                    <segue destination="9pv-A4-QxB" kind="show" id="Hhv-2G-CYB"/>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="ZFo-k7-4Vg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -222,7 +231,7 @@ anonymously. </string>
                                                                         <constraint firstAttribute="height" constant="20" id="gy8-g1-yu9"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Dh2-NE-MHF">
@@ -230,7 +239,7 @@ anonymously. </string>
                                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
@@ -319,7 +328,4 @@ anonymously. </string>
         <image name="post" width="28" height="28"/>
         <image name="read" width="27" height="26"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Hhv-2G-CYB"/>
-    </inferredMetricsTieBreakers>
 </document>

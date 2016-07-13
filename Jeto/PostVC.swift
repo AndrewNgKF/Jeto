@@ -23,7 +23,7 @@ class PostVC: UIViewController, UITextViewDelegate{
 
         jetoField.text = "What would you like to get off your chest?"
         jetoField.textColor = UIColor.lightGrayColor()
-        jetoField.becomeFirstResponder()
+//        jetoField.becomeFirstResponder()
         
         jetoField.selectedTextRange = jetoField.textRangeFromPosition(jetoField.beginningOfDocument, toPosition: jetoField.beginningOfDocument)
         jetoField.delegate = self
@@ -74,8 +74,9 @@ class PostVC: UIViewController, UITextViewDelegate{
 
     @IBAction func publishBtn(sender: AnyObject) {
         
-        if (titleField.text?.characters.count < 8 || titleField.text?.characters.count == nil) || (jetoField.text?.characters.count < 8 || jetoField.text?.characters.count == nil) {
-            let alert = UIAlertController(title: "Alert", message: "It's too short", preferredStyle: UIAlertControllerStyle.Alert)
+        if ((titleField.text?.characters.count < 3 || titleField.text?.characters.count == nil) || (jetoField.text?.characters.count < 3 || jetoField.text?.characters.count == nil))
+            {
+            let alert = UIAlertController(title: "Sorry", message: "Your Jeto is too short", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             
@@ -91,7 +92,16 @@ class PostVC: UIViewController, UITextViewDelegate{
             let firebasePost = DataService.ds.REF_JETO.childByAutoId()
             
             firebasePost.setValue(post)
+            titleField.text = ""
+            jetoField.text = "What would you like to get off your chest?"
+            jetoField.textColor = UIColor.lightGrayColor()
 
+            dismissKeyboard()
+            
+            let successfulPostAlert = UIAlertController(title: "Post Successful", message: "Your Jeto has been sent", preferredStyle: UIAlertControllerStyle.Alert)
+            successfulPostAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(successfulPostAlert, animated: true, completion: nil)
+            
         }
         
         
