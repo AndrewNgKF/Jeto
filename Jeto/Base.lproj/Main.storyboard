@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="738" y="-434"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dkC-bt-ygb">
@@ -261,7 +261,7 @@ anonymously. </string>
                                                 <constraint firstItem="i7y-fR-ZHh" firstAttribute="top" secondItem="fAm-c3-zEX" secondAttribute="topMargin" id="kqT-4s-r86"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="jetoLbl" destination="Dh2-NE-MHF" id="voV-Nx-H4F"/>
                                             <outlet property="titleLbl" destination="ebr-Ts-oTH" id="GPo-iC-tYT"/>
@@ -313,8 +313,8 @@ anonymously. </string>
                         <color key="selectedImageTintColor" red="1" green="0.93743140649882029" blue="0.61714462373006607" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -323,8 +323,8 @@ anonymously. </string>
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="72" height="93"/>
-        <image name="info" width="84" height="84"/>
+        <image name="back" width="24" height="31"/>
+        <image name="info" width="28" height="28"/>
         <image name="post" width="28" height="28"/>
         <image name="read" width="27" height="26"/>
     </resources>

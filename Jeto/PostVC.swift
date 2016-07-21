@@ -21,7 +21,7 @@ class PostVC: UIViewController, UITextViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jetoField.text = "What would you like to get off your chest?"
+        jetoField.text = "What would you like to gain release from?"
         jetoField.textColor = UIColor.lightGrayColor()
 //        jetoField.becomeFirstResponder()
         
@@ -39,7 +39,7 @@ class PostVC: UIViewController, UITextViewDelegate{
         
         if updatedText.isEmpty {
             
-            jetoField.text = "What would you like to get off your chest?"
+            jetoField.text = "What would you like to gain release from?"
             jetoField.textColor = UIColor.lightGrayColor()
             
             jetoField.selectedTextRange = jetoField.textRangeFromPosition(jetoField.beginningOfDocument, toPosition: jetoField.beginningOfDocument)
@@ -76,7 +76,7 @@ class PostVC: UIViewController, UITextViewDelegate{
         
         if ((titleField.text?.characters.count < 3 || titleField.text?.characters.count == nil) || (jetoField.text?.characters.count < 3 || jetoField.text?.characters.count == nil))
             {
-            let alert = UIAlertController(title: "Sorry", message: "Your Jeto is too short", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Sorry", message: "Your Jeto Is Too Short", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             
@@ -93,7 +93,7 @@ class PostVC: UIViewController, UITextViewDelegate{
             
             firebasePost.setValue(post)
             titleField.text = ""
-            jetoField.text = "What would you like to get off your chest?"
+            jetoField.text = "What would you like to gain release from"
             jetoField.textColor = UIColor.lightGrayColor()
 
             dismissKeyboard()
