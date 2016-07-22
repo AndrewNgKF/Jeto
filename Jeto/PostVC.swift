@@ -21,7 +21,7 @@ class PostVC: UIViewController, UITextViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        jetoField.text = "What would you like to gain release from?"
+        jetoField.text = "What Would You Like To Gain Release From?"
         jetoField.textColor = UIColor.lightGrayColor()
 //        jetoField.becomeFirstResponder()
         
@@ -39,7 +39,7 @@ class PostVC: UIViewController, UITextViewDelegate{
         
         if updatedText.isEmpty {
             
-            jetoField.text = "What would you like to gain release from?"
+            jetoField.text = "What Would You Like To Gain Release From?"
             jetoField.textColor = UIColor.lightGrayColor()
             
             jetoField.selectedTextRange = jetoField.textRangeFromPosition(jetoField.beginningOfDocument, toPosition: jetoField.beginningOfDocument)
@@ -93,12 +93,12 @@ class PostVC: UIViewController, UITextViewDelegate{
             
             firebasePost.setValue(post)
             titleField.text = ""
-            jetoField.text = "What would you like to gain release from"
+            jetoField.text = "What Would You Like To Gain Release From?"
             jetoField.textColor = UIColor.lightGrayColor()
 
             dismissKeyboard()
             
-            let successfulPostAlert = UIAlertController(title: "Post Successful", message: "Your Jeto has been sent", preferredStyle: UIAlertControllerStyle.Alert)
+            let successfulPostAlert = UIAlertController(title: "Post Successful", message: "Your Jeto Has Been Sent.", preferredStyle: UIAlertControllerStyle.Alert)
             successfulPostAlert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(successfulPostAlert, animated: true, completion: nil)
             

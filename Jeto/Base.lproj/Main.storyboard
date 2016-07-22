@@ -95,7 +95,13 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <tabBarItem key="tabBarItem" title="" image="post" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="" image="post" id="acW-dT-cKf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96666666666666667" green="0.96666666666666667" blue="0.96666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="jetoField" destination="W8e-d2-nUm" id="I9G-4f-vh3"/>
                         <outlet property="titleField" destination="xrq-gE-XaJ" id="TS4-qd-AEI"/>
@@ -206,40 +212,40 @@ anonymously. </string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="304" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-Av-cc3">
-                                <rect key="frame" x="0.0" y="79" width="600" height="472"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="304" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Omz-Av-cc3">
+                                <rect key="frame" x="0.0" y="72" width="600" height="479"/>
+                                <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="JetoCell" focusStyle="custom" rowHeight="304" id="pUZ-QH-z3d" customClass="JetoCell" customModule="Jeto" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="304"/>
+                                        <rect key="frame" x="0.0" y="50" width="600" height="304"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pUZ-QH-z3d" id="fAm-c3-zEX">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="304"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-fR-ZHh" customClass="Material" customModule="Jeto" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7y-fR-ZHh" customClass="MaterialLook" customModule="Jeto" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="584" height="287"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S5R-0I-cF7">
+                                                        <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S5R-0I-cF7">
                                                             <rect key="frame" x="0.0" y="0.0" width="584" height="288"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ebr-Ts-oTH">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="20"/>
-                                                                    <color key="backgroundColor" white="0.93435142104257674" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="584" height="23"/>
+                                                                    <color key="backgroundColor" red="0.88627450980392153" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="20" id="gy8-g1-yu9"/>
+                                                                        <constraint firstAttribute="height" constant="23" id="gy8-g1-yu9"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Dh2-NE-MHF">
-                                                                    <rect key="frame" x="0.0" y="20" width="584" height="268"/>
-                                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dh2-NE-MHF" customClass="FeedTextBorder" customModule="Jeto" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="23" width="584" height="265"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                                                    <color key="textColor" white="0.10067114093959731" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
@@ -247,7 +253,7 @@ anonymously. </string>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="S5R-0I-cF7" secondAttribute="bottom" id="8fj-2f-WvX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="S5R-0I-cF7" secondAttribute="bottom" constant="-1" id="8fj-2f-WvX"/>
                                                         <constraint firstItem="S5R-0I-cF7" firstAttribute="top" secondItem="i7y-fR-ZHh" secondAttribute="top" id="OXw-o2-i7J"/>
                                                         <constraint firstItem="S5R-0I-cF7" firstAttribute="leading" secondItem="i7y-fR-ZHh" secondAttribute="leading" id="Z7P-fY-5IB"/>
                                                         <constraint firstAttribute="trailing" secondItem="S5R-0I-cF7" secondAttribute="trailing" id="yGc-lz-hj9"/>
@@ -255,13 +261,13 @@ anonymously. </string>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="i7y-fR-ZHh" firstAttribute="bottom" secondItem="fAm-c3-zEX" secondAttribute="bottomMargin" id="6uM-2a-HKo"/>
+                                                <constraint firstItem="i7y-fR-ZHh" firstAttribute="bottom" secondItem="fAm-c3-zEX" secondAttribute="bottomMargin" constant="-1" id="6uM-2a-HKo"/>
                                                 <constraint firstItem="i7y-fR-ZHh" firstAttribute="leading" secondItem="fAm-c3-zEX" secondAttribute="leadingMargin" id="anH-LL-LTu"/>
                                                 <constraint firstItem="i7y-fR-ZHh" firstAttribute="trailing" secondItem="fAm-c3-zEX" secondAttribute="trailingMargin" id="f89-xu-B1K"/>
                                                 <constraint firstItem="i7y-fR-ZHh" firstAttribute="top" secondItem="fAm-c3-zEX" secondAttribute="topMargin" id="kqT-4s-r86"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.92281879194630867" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="jetoLbl" destination="Dh2-NE-MHF" id="voV-Nx-H4F"/>
                                             <outlet property="titleLbl" destination="ebr-Ts-oTH" id="GPo-iC-tYT"/>
@@ -273,12 +279,15 @@ anonymously. </string>
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="UXl-UL-NTf"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="search here" translatesAutoresizingMaskIntoConstraints="NO" id="k3d-QD-aFe">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Here" translatesAutoresizingMaskIntoConstraints="NO" id="k3d-QD-aFe">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZbY-8Q-NZK"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Omz-Av-cc3" firstAttribute="top" secondItem="k3d-QD-aFe" secondAttribute="bottom" id="8R4-4j-y5v"/>
                             <constraint firstItem="k3d-QD-aFe" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" id="92C-wz-xll"/>
@@ -289,7 +298,15 @@ anonymously. </string>
                             <constraint firstAttribute="trailing" secondItem="Omz-Av-cc3" secondAttribute="trailing" id="s7i-Tj-CCa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="read" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="" image="read" id="cPa-gy-q4n">
+                        <inset key="imageInsets" minX="0.0" minY="2" maxX="0.0" maxY="-2"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.93688732624611615" green="0.95641025641025645" blue="0.899374800809421" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="feedTableView" destination="Omz-Av-cc3" id="c8J-GR-bjU"/>
                         <outlet property="jetoSearchBar" destination="k3d-QD-aFe" id="eHl-bn-kca"/>
@@ -304,13 +321,11 @@ anonymously. </string>
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.47469117017400347" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.95934410797301228" green="0.88069851736417992" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.88627450980392153" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" red="1" green="0.93743140649882029" blue="0.61714462373006607" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>

@@ -28,6 +28,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FeedVC.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         feedTableView.delegate = self
         feedTableView.dataSource = self
         feedTableView.rowHeight = UITableViewAutomaticDimension
@@ -36,6 +39,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         
         jetoSearchBar.delegate = self
         jetoSearchBar.returnKeyType = UIReturnKeyType.Done
+        
         
         //TODO - put posts into a dictionary and display it to the tableView
         
@@ -139,6 +143,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
             feedTableView.reloadData()
         }
     }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
+
     
 }
 
