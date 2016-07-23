@@ -15,6 +15,8 @@ class PostVC: UIViewController, UITextViewDelegate{
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var jetoField: UITextView!
     
+    let badWords = ["word","words","wordy"]
+    
     
     
 
