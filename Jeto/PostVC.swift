@@ -9,13 +9,15 @@
 import UIKit
 import Firebase
 
+
+
+
 class PostVC: UIViewController, UITextViewDelegate{
     
     
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var jetoField: UITextView!
     
-    let badWords = ["word","words","wordy"]
     
     
     
@@ -23,6 +25,8 @@ class PostVC: UIViewController, UITextViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
+        
         jetoField.text = "What Would You Like To Gain Release From?"
         jetoField.textColor = UIColor.lightGrayColor()
 //        jetoField.becomeFirstResponder()
@@ -75,6 +79,8 @@ class PostVC: UIViewController, UITextViewDelegate{
    
 
     @IBAction func publishBtn(sender: AnyObject) {
+        
+      
         
         if ((titleField.text?.characters.count < 3 || titleField.text?.characters.count == nil) || (jetoField.text?.characters.count < 3 || jetoField.text?.characters.count == nil))
             {

@@ -109,6 +109,13 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="" image="post" id="5DD-Bn-hCI">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.92586137820512815" green="0.92586137820512815" blue="0.92586137820512815" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="jlA-da-mWt"/>
                     <connections>
                         <outlet property="jetoField" destination="W8e-d2-nUm" id="I9G-4f-vh3"/>
@@ -117,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802" y="-630"/>
+            <point key="canvasLocation" x="254" y="-498"/>
         </scene>
         <!--Info View Controller-->
         <scene sceneID="dkC-bt-ygb">
@@ -200,7 +207,7 @@ anonymously. </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUs-vm-dRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647" y="-630"/>
+            <point key="canvasLocation" x="1099" y="-498"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="wg7-f3-ORb">
@@ -347,119 +354,12 @@ anonymously. </string>
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="bh6-c7-uVe" kind="relationship" relationship="viewControllers" id="GSJ-DP-WfM"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="ZAI-xq-447"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-631" y="-89"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="APU-Oj-VkC">
-            <objects>
-                <viewController id="V6U-hr-vW2" customClass="LoginViewController" customModule="Jeto" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sax-pW-q1u"/>
-                        <viewControllerLayoutGuide type="bottom" id="qQZ-pz-zPH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jx8-7C-bQO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login / Create New Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uow-BD-dWH">
-                                <rect key="frame" x="88" y="28" width="424" height="47"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
-                                <color key="textColor" red="0.8862745098" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bx5-TW-rK8" customClass="RoundedButton" customModule="Jeto" customModuleProvider="target">
-                                <rect key="frame" x="155" y="401" width="291" height="42"/>
-                                <color key="backgroundColor" red="0.8862745098" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
-                                <state key="normal" title="Login / Create Account">
-                                    <color key="titleColor" white="0.96124082840000002" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="attemptLogin:" destination="V6U-hr-vW2" eventType="touchUpInside" id="smZ-OL-y4P"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zs8-zh-neg">
-                                <rect key="frame" x="20" y="220" width="560" height="30"/>
-                                <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PlT-DA-NhQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F38-6b-zbP">
-                                <rect key="frame" x="20" y="271" width="560" height="30"/>
-                                <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="GfV-1F-LsH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="F38-6b-zbP" firstAttribute="top" secondItem="Zs8-zh-neg" secondAttribute="bottom" constant="21" id="4jm-SQ-1fC"/>
-                            <constraint firstItem="Uow-BD-dWH" firstAttribute="centerX" secondItem="Jx8-7C-bQO" secondAttribute="centerX" id="GGC-rk-c2J"/>
-                            <constraint firstItem="qQZ-pz-zPH" firstAttribute="top" secondItem="Bx5-TW-rK8" secondAttribute="bottom" constant="50" id="HSm-cH-LDP"/>
-                            <constraint firstItem="Zs8-zh-neg" firstAttribute="trailing" secondItem="Jx8-7C-bQO" secondAttribute="trailingMargin" id="MIj-9B-0mv"/>
-                            <constraint firstItem="Zs8-zh-neg" firstAttribute="leading" secondItem="Jx8-7C-bQO" secondAttribute="leadingMargin" id="Tl8-vQ-ySZ"/>
-                            <constraint firstItem="Bx5-TW-rK8" firstAttribute="centerX" secondItem="Jx8-7C-bQO" secondAttribute="centerX" id="Tq8-fL-qpE"/>
-                            <constraint firstItem="F38-6b-zbP" firstAttribute="leading" secondItem="Jx8-7C-bQO" secondAttribute="leadingMargin" id="UL9-2C-Rlt"/>
-                            <constraint firstItem="F38-6b-zbP" firstAttribute="centerX" secondItem="Jx8-7C-bQO" secondAttribute="centerX" id="eg7-Ja-7A8"/>
-                            <constraint firstItem="F38-6b-zbP" firstAttribute="trailing" secondItem="Jx8-7C-bQO" secondAttribute="trailingMargin" id="kv0-Vz-2Ys"/>
-                            <constraint firstItem="Zs8-zh-neg" firstAttribute="top" secondItem="Uow-BD-dWH" secondAttribute="bottom" constant="145" id="n4x-UW-diz"/>
-                            <constraint firstItem="Zs8-zh-neg" firstAttribute="centerX" secondItem="Jx8-7C-bQO" secondAttribute="centerX" id="s7n-sa-WsT"/>
-                            <constraint firstItem="Uow-BD-dWH" firstAttribute="top" secondItem="sax-pW-q1u" secondAttribute="bottom" constant="20" id="xf8-wF-tsk"/>
-                        </constraints>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" id="sTH-fa-aoM"/>
-                    <connections>
-                        <outlet property="emailField" destination="Zs8-zh-neg" id="Dmm-mv-yhb"/>
-                        <outlet property="passwordField" destination="F38-6b-zbP" id="qOB-RX-fK9"/>
-                        <segue destination="9pv-A4-QxB" kind="show" identifier="loggedIn" id="9Rc-lz-QDq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6lc-j4-Whd" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="987" y="-638"/>
-        </scene>
-        <!--Navigation Control-->
-        <scene sceneID="WgA-Ne-DHH">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T4q-vm-CQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="bh6-c7-uVe" customClass="UINavigationControl" customModule="Jeto" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="post" id="oYl-89-G4f">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mo8-et-oGy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.88627450980392153" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="XDo-tn-AK1">
-                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.97400214188930068" green="0.95952729743917475" blue="0.98883861236802406" alpha="1" colorSpace="calibratedRGB"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="V6U-hr-vW2" kind="relationship" relationship="rootViewController" id="BTJ-o4-l6M"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="175" y="-638"/>
         </scene>
     </scenes>
     <resources>
