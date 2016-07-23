@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+import MessageUI
+
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, MFMailComposeViewControllerDelegate {
     
     var posts = [Post]()
     
@@ -148,8 +150,34 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISe
         view.endEditing(true)
     }
     
+//    @IBAction func launchReportEmail(sender: AnyObject){
+//        let emailTitle = "Report Questionable Post"
+//        let messageBody = "Hi, I would like to file a report on this post."
+//        let toRecipents = ["andrew.ctrl.alt.del@gmail.com"]
+//        
+//        
+//        let mc: MFMailComposeViewController = MFMailComposeViewController()
+//        mc.mailComposeDelegate = self
+//        mc.setSubject(emailTitle)
+//        mc.setMessageBody(messageBody, isHTML: false)
+//        mc.setToRecipients(toRecipents)
+//        
+//        self.presentViewController(mc, animated: true, completion: nil)
+//        
+//    }
+//    
+   
     
-
+    
+    @IBAction func sendEmail(sender:AnyObject) {
+    
+    let email = "andrew.ctrl.alt.del@gmail.com"
+    let url = NSURL(string: "mailto:\(email)")
+    UIApplication.sharedApplication().openURL(url!)
+    
+    }
+    
+    
     
 }
 
