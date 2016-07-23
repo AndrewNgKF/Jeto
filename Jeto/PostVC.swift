@@ -70,7 +70,7 @@ class PostVC: UIViewController, UITextViewDelegate{
             jetoField.textColor = UIColor.blackColor()
         }
     }
-   
+    
 
     @IBAction func publishBtn(sender: AnyObject) {
         
